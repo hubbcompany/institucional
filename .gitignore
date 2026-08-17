@@ -1,0 +1,14 @@
+# Arquivos do sistema
+Thumbs.db
+.DS_Store
+
+# Rascunhos e documentos internos (sugestões ainda não aprovadas,
+# não fazem parte do site público até serem revisados e inseridos)
+content/aviso-privacidade-rascunho.md
+
+# Variáveis de ambiente / segredos (prevenção — nenhum arquivo desse tipo
+# existe hoje no projeto, mas evita commit acidental no futuro)
+.env
+.env.*
+*.env
+.env.local

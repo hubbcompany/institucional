@@ -238,6 +238,35 @@ ul {
 }
 
 /* ==========================================================================
+   Páginas legais (privacidade, termos, exclusão de dados)
+   ========================================================================== */
+
+.legal-content {
+  max-width: 720px;
+}
+
+.legal-content h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.legal-content h2 {
+  font-size: 1.25rem;
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.legal-content p {
+  max-width: none;
+}
+
+.updated-date {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+/* ==========================================================================
    Rodapé
    ========================================================================== */
 
@@ -251,6 +280,15 @@ ul {
 
 .site-footer a {
   color: #ffffff;
+}
+
+.footer-links {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.footer-links a {
+  margin: 0 0.4rem;
 }
 
 /* ==========================================================================

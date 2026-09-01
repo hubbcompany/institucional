@@ -75,8 +75,67 @@
     </section>
     <section id="metodo" class="section method-section"><div class="container method-grid"><div class="method-intro"><p class="eyebrow light">Como fazemos</p><h2>Da rotina travada ao fluxo que funciona.</h2><p>Automação boa começa antes da tecnologia. Primeiro entendemos o processo; depois desenhamos, implementamos e acompanhamos.</p><a class="btn btn-outline" href="mailto:contato@hubbcompany.com.br?subject=Diagnóstico%20de%20automação">Agendar um diagnóstico</a></div><ol class="steps-list"><li><span>01</span><div><h3>Diagnóstico</h3><p>Mapeamos gargalos, repetições e oportunidades reais de ganho.</p></div></li><li><span>02</span><div><h3>Desenho da solução</h3><p>Definimos o fluxo, as integrações e os indicadores de sucesso.</p></div></li><li><span>03</span><div><h3>Implementação</h3><p>Construímos, testamos e colocamos a automação em operação.</p></div></li><li><span>04</span><div><h3>Evolução</h3><p>Acompanhamos os resultados e refinamos o processo continuamente.</p></div></li></ol></div></section>
     <section id="sobre" class="section about-section"><div class="container about-grid"><div class="about-statement"><p class="eyebrow">Por que a Hubb</p><h2>Tecnologia só faz sentido quando melhora o trabalho das pessoas.</h2></div><div class="about-copy"><p>A Hubb Company é uma agência de automação de processos. Unimos visão de negócio e tecnologia para transformar operações manuais em sistemas simples, conectados e confiáveis.</p><p>Trabalhamos próximos de cada cliente, do diagnóstico à entrega, com soluções sob medida e comunicação direta. O objetivo é simples: fazer sua empresa operar melhor.</p><div class="values-row"><div><strong>Clareza</strong><span>antes da complexidade</span></div><div><strong>Resultado</strong><span>antes da ferramenta</span></div><div><strong>Parceria</strong><span>do início à evolução</span></div></div></div></div></section>
-    <section id="contato" class="contact-section"><div class="container contact-panel"><div><p class="eyebrow light">Vamos conversar</p><h2>Qual processo está tomando o tempo do seu time?</h2></div><div class="contact-action"><p>Conte para a gente. Em uma conversa inicial, identificamos onde a automação pode gerar mais impacto.</p><a href="mailto:contato@hubbcompany.com.br?subject=Quero%20automatizar%20meus%20processos" class="btn btn-light">contato@hubbcompany.com.br <span aria-hidden="true">↗</span></a></div></div></section>
+    <section id="contato" class="contact-section">
+      <div class="container contact-panel">
+        <div class="contact-copy">
+          <p class="eyebrow light">Vamos conversar</p>
+          <h2>Qual processo está tomando o tempo do seu time?</h2>
+          <p>Conte um pouco do cenário. A gente lê, entende o desafio e responde com o próximo passo — sem roteiro engessado.</p>
+          <a href="mailto:contato@hubbcompany.com.br">contato@hubbcompany.com.br</a>
+        </div>
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xdeoeqor" method="POST">
+          <input type="hidden" name="_subject" value="Novo contato pelo site da Hubb Company">
+          <div class="form-row">
+            <div class="form-field"><label for="name">Seu nome</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Como podemos te chamar?" required></div>
+            <div class="form-field"><label for="company">Empresa</label><input id="company" name="company" type="text" autocomplete="organization" placeholder="Nome da empresa"></div>
+          </div>
+          <div class="form-field"><label for="email">E-mail profissional</label><input id="email" name="email" type="email" autocomplete="email" placeholder="voce@empresa.com.br" required></div>
+          <div class="form-field"><label for="process">O que você gostaria de automatizar?</label><textarea id="process" name="process" rows="4" placeholder="Conte sobre a rotina, o gargalo ou aquela tarefa que ninguém aguenta mais repetir..." required></textarea></div>
+          <div class="form-trap" aria-hidden="true"><label for="website">Não preencha</label><input id="website" name="_gotcha" type="text" tabindex="-1" autocomplete="off"></div>
+          <label class="form-consent"><input type="checkbox" name="privacy_consent" value="aceito" required><span>Li e concordo com a <a href="/politica-de-privacidade/" target="_blank" rel="noopener">Política de Privacidade</a>.</span></label>
+          <button class="btn btn-light form-submit" type="submit"><span class="button-label">Enviar mensagem</span><span aria-hidden="true">↗</span></button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
   </main>
   <footer class="site-footer"><div class="container footer-main"><a href="#topo" class="logo logo-footer"><span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>hubb<span>company</span></span></a><p>Automação de processos para empresas que querem operar melhor.</p></div><div class="container footer-bottom"><p>© 2026 Hubb Company. Todos os direitos reservados.</p><nav aria-label="Links legais"><a href="/politica-de-privacidade/">Privacidade</a><a href="/termos-de-servico/">Termos</a><a href="/exclusao-de-dados/">Exclusão de dados</a></nav></div></footer>
+  <script>
+    const contactForm = document.querySelector('#contact-form');
+    const formStatus = document.querySelector('#form-status');
+
+    contactForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const button = contactForm.querySelector('button[type="submit"]');
+      const buttonLabel = button.querySelector('.button-label');
+
+      button.disabled = true;
+      buttonLabel.textContent = 'Enviando...';
+      formStatus.className = 'form-status';
+      formStatus.textContent = '';
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (!response.ok) throw new Error('formspree-error');
+
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'formulario_enviado', form_name: 'contato_hubb_company' });
+        contactForm.reset();
+        formStatus.className = 'form-status success';
+        formStatus.textContent = 'Mensagem enviada! Agora é com a gente. Em breve entraremos em contato.';
+      } catch (error) {
+        formStatus.className = 'form-status error';
+        formStatus.innerHTML = 'Não conseguimos enviar agora. Tente novamente ou escreva para <a href="mailto:contato@hubbcompany.com.br">contato@hubbcompany.com.br</a>.';
+      } finally {
+        button.disabled = false;
+        buttonLabel.textContent = 'Enviar mensagem';
+      }
+    });
+  </script>
 </body>
 </html>

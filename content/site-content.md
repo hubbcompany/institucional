@@ -1,58 +1,34 @@
 # Conteúdo do Site — Hubb Company
 
-Este arquivo reúne todo o texto (copy) institucional do site da Hubb Company,
-organizado por seção, para uso direto pelo time de design/frontend.
+## Posicionamento
 
----
+Agência de automação de processos para empresas que querem operar melhor.
 
-## Topo/Hero
+## Proposta de valor
 
-**Hubb Company**
+Transformamos rotinas repetitivas em fluxos inteligentes para sua empresa ganhar tempo, reduzir erros e crescer sem aumentar a complexidade.
 
-Soluções pensadas para o seu negócio crescer com confiança.
+## Mensagem principal
 
-**[Fale conosco]**
+**Menos tarefas manuais. Mais negócio acontecendo.**
 
----
+## Soluções
 
-## Sobre a empresa
+- Atendimento e relacionamento: WhatsApp, Instagram, triagem, distribuição e follow-ups.
+- Operações e rotinas internas: integrações, aprovações, notificações e organização de dados.
+- Comercial e marketing: captura e qualificação de leads, CRM e relatórios automáticos.
 
-A Hubb Company é [PLACEHOLDER: texto sobre quem é a empresa, história e propósito].
+## Método
 
-Acreditamos que cada cliente merece atenção, cuidado e soluções sob medida.
-Nosso compromisso é oferecer um atendimento próximo e transparente, construindo
-relações de confiança em cada projeto.
+1. Diagnóstico dos gargalos e oportunidades.
+2. Desenho do fluxo, das integrações e dos indicadores.
+3. Implementação e testes.
+4. Acompanhamento e evolução contínua.
 
-[PLACEHOLDER: texto adicional sobre missão, visão e valores da empresa]
+## Sobre
 
----
-
-## Serviços/O que fazemos
-
-Conheça as soluções que oferecemos:
-
-- [PLACEHOLDER: nome e descrição do serviço 1]
-- [PLACEHOLDER: nome e descrição do serviço 2]
-- [PLACEHOLDER: nome e descrição do serviço 3]
-
-[PLACEHOLDER: texto sobre os serviços oferecidos, caso a lista acima não seja suficiente]
-
----
+A Hubb Company une visão de negócio e tecnologia para transformar operações manuais em sistemas simples, conectados e confiáveis. Trabalha próxima de cada cliente, do diagnóstico à entrega, com soluções sob medida e comunicação direta.
 
 ## Contato
 
-Estamos prontos para conversar com você e entender como podemos ajudar.
-
-- **Telefone/WhatsApp:** [PLACEHOLDER: telefone/WhatsApp]
-- **E-mail:** [PLACEHOLDER: e-mail de contato]
-- **Endereço:** [PLACEHOLDER: endereço completo da empresa]
-- **Horário de atendimento:** [PLACEHOLDER: horário de atendimento]
-
-Entre em contato conosco e descubra como a Hubb Company pode ajudar você a
-alcançar seus objetivos.
-
----
-
-## Rodapé
-
-Hubb Company — © 2026. Todos os direitos reservados.
+contato@hubbcompany.com.br
